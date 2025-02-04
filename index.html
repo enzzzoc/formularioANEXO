@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Riego</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario de Riego</h2>
+        
+        <label>Parcela (NC):</label>
+        <input type="text" id="parcela">
+
+        <label>Superficie total del establecimiento (hectáreas):</label>
+        <input type="number" id="superficie_total">
+
+        <label>Superficie a irrigar (hectáreas):</label>
+        <input type="number" id="superficie_irrigar">
+
+        <h3>DATOS DEL TITULAR</h3>
+
+        <label>Apellido y Nombre:</label>
+        <input type="text" id="nombre">
+
+        <label>Dirección:</label>
+        <input type="text" id="direccion">
+
+        <label>Teléfono:</label>
+        <input type="tel" id="telefono">
+
+        <label>Email:</label>
+        <input type="email" id="email">
+
+        <label>Tipo de Explotación:</label>
+        <select id="tipo_explotacion">
+            <option value="Agrícola">Agrícola</option>
+            <option value="Pecuario">Pecuario</option>
+            <option value="Mixto">Mixto</option>
+            <option value="RENSPA">RENSPA</option>
+        </select>
+
+        <h3>Agrícola</h3>
+
+        <label>Especie a implantar:</label>
+        <select id="especie_implantar">
+            <option value="Anuales">Anuales</option>
+            <option value="Perennes">Perennes</option>
+        </select>
+
+        <label>Especies a implantar:</label>
+        <textarea id="especies"></textarea>
+
+        <label>Método de Riego:</label>
+        <select id="metodo_riego">
+            <option value="Gravedad">Gravedad</option>
+            <option value="Presurizado">Presurizado</option>
+            <option value="Aspersión">Aspersión</option>
+        </select>
+
+        <h3>Preparación del suelo</h3>
+
+        <label>Labranza:</label>
+        <select id="labranza">
+            <option value="Convencional">Convencional</option>
+            <option value="Directa">Directa</option>
+        </select>
+
+        <label>Rotación de cultivo:</label>
+        <select id="rotacion">
+            <option value="Si">Sí</option>
+            <option value="No">No</option>
+        </select>
+
+        <h3>Pecuaria</h3>
+
+        <label>Tipo de Ganado:</label>
+        <select id="tipo_ganado">
+            <option value="Bovino">Bovino</option>
+            <option value="Ovino">Ovino</option>
+            <option value="Porcino">Porcino</option>
+            <option value="Ninguna">Ninguna</option>
+            <option value="Otro">Otro</option>
+        </select>
+
+        <label>Número de Cabezas/Ganado:</label>
+        <input type="number" id="num_cabezas">
+
+        <h3>Prácticas Agrícolas</h3>
+
+        <label>¿Posee conocimientos sobre BPA?</label>
+        <select id="bpa">
+            <option value="Si">Sí</option>
+            <option value="No">No</option>
+        </select>
+
+        <label>Aplicación de Agroquímicos - Productos aplicados:</label>
+        <textarea id="productos"></textarea>
+
+        <h3>Generación de Residuos</h3>
+
+        <label>¿Adhesión a la campaña Campo Limpio?</label>
+        <select id="campo_limpio">
+            <option value="Si">Sí</option>
+            <option value="No">No</option>
+        </select>
+
+        <label>Residuos generados por aplicación de productos fitosanitarios:</label>
+        <textarea id="residuos_fitosanitarios"></textarea>
+
+        <label>Residuos generados por mantenimiento y uso de maquinaria agrícola:</label>
+        <textarea id="residuos_maquinaria"></textarea>
+
+        <h3>Efluentes</h3>
+
+        <label>¿El proyecto de riego podría generar vertidos de efluentes a cuerpos de agua?</label>
+        <select id="efluentes">
+            <option value="Si">Sí</option>
+            <option value="No">No</option>
+        </select>
+
+        <button onclick="imprimirPDF()">Generar PDF</button>
+    </div>
+
+    <script>
+        function imprimirPDF() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
