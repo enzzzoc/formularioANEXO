@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+
+button {
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.firma {
+    margin-top: 30px;
+}
+
+.firma p {
+    margin-top: 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+/* Estilos para impresión */
+@media print {
+    button {
+        display: none;
+    }
+
+    .logo {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+/* Checkbox en línea */
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin-right: 5px;
+}
