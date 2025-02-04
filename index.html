@@ -29,8 +29,13 @@
             margin-top: 10px;
             cursor: pointer;
         }
-        .hidden {
-            display: none;
+        .compromiso {
+            margin-top: 20px;
+            padding: 10px;
+            border-top: 2px solid black;
+        }
+        .firma {
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -148,6 +153,20 @@
             <option value="No">No</option>
         </select>
 
+        <!-- COMPROMISO -->
+        <div class="compromiso">
+            <h3>COMPROMISO DE CUMPLIMIENTO DE LA NORMATIVA VIGENTE</h3>
+            <p>1. Dar estricto cumplimiento a la totalidad de la normativa ambiental vigente (Nacional, Provincial, Municipal).</p>
+            <p>2. Asumir el compromiso de adoptar las medidas que correspondan en caso de verificarse alteraciones al ambiente.</p>
+            <p>3. Se compromete a proveer los elementos de protección personal al personal a cargo del manejo de productos fitosanitarios.</p>
+            <p>4. Se compromete a dar el manejo adecuado de los residuos.</p>
+            <p>5. Se compromete a no generar alteraciones por fuera de la parcela asignada al proyecto.</p>
+            <p>El que suscribe, en el carácter antes invocado, declara bajo juramento que los datos consignados en la presente son correctos y completos y que esta declaración ha sido confeccionada sin omitir ni falsear dato alguno que deba contener, siendo fiel expresión de la verdad.</p>
+        </div>
+
+        <!-- Firma -->
+        <h3>FIRMA</h3>
+        <h3>ACLARACIÓN:</h3>
         <button onclick="imprimirPDF()">Generar PDF</button>
     </div>
 
