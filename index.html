@@ -3,46 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Riego</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-        }
-        label {
-            font-weight: bold;
-        }
-        input, select, textarea {
-            width: 100%;
-            padding: 5px;
-            margin: 5px 0 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-        }
-        button {
-            padding: 10px;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-        .compromiso {
-            margin-top: 20px;
-            padding: 10px;
-            border-top: 2px solid black;
-        }
-        .firma {
-            margin-top: 20px;
-        }
-    </style>
+    <title>Formulario de Riego - Nuevos Regantes</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h2>Formulario de Riego</h2>
-        
+
+        <div class="logo">
+            <img src="logo.png" alt="Logo de institucion">
+        </div>
+
         <label>Parcela (NC):</label>
         <input type="text" id="parcela">
 
@@ -67,38 +38,38 @@
         <input type="email" id="email">
 
         <label>Tipo de Explotación:</label>
-        <select id="tipo_explotacion">
-            <option value="Agrícola">Agrícola</option>
-            <option value="Pecuario">Pecuario</option>
-            <option value="Mixto">Mixto</option>
-            <option value="RENSPA">RENSPA</option>
-        </select>
+        <div class="checkbox-group">
+            <input type="checkbox" id="agricola"> <label for="agricola">Agrícola</label>
+            <input type="checkbox" id="pecuario"> <label for="pecuario">Pecuario</label>
+            <input type="checkbox" id="mixto"> <label for="mixto">Mixto</label>
+            <input type="checkbox" id="renspa"> <label for="renspa">RENSPA</label>
+        </div>
 
         <h3>Agrícola</h3>
 
         <label>Especie a implantar:</label>
-        <select id="especie_implantar">
-            <option value="Anuales">Anuales</option>
-            <option value="Perennes">Perennes</option>
-        </select>
+        <div class="checkbox-group">
+            <input type="checkbox" id="anuales"> <label for="anuales">Anuales</label>
+            <input type="checkbox" id="perennes"> <label for="perennes">Perennes</label>
+        </div>
 
         <label>Especies a implantar:</label>
         <textarea id="especies"></textarea>
 
         <label>Método de Riego:</label>
-        <select id="metodo_riego">
-            <option value="Gravedad">Gravedad</option>
-            <option value="Presurizado">Presurizado</option>
-            <option value="Aspersión">Aspersión</option>
-        </select>
+        <div class="checkbox-group">
+            <input type="checkbox" id="gravedad"> <label for="gravedad">Gravedad</label>
+            <input type="checkbox" id="presurizado"> <label for="presurizado">Presurizado</label>
+            <input type="checkbox" id="aspersion"> <label for="aspersion">Aspersión</label>
+        </div>
 
         <h3>Preparación del suelo</h3>
 
         <label>Labranza:</label>
-        <select id="labranza">
-            <option value="Convencional">Convencional</option>
-            <option value="Directa">Directa</option>
-        </select>
+        <div class="checkbox-group">
+            <input type="checkbox" id="convencional"> <label for="convencional">Convencional</label>
+            <input type="checkbox" id="directa"> <label for="directa">Directa</label>
+        </div>
 
         <label>Rotación de cultivo:</label>
         <select id="rotacion">
@@ -109,13 +80,13 @@
         <h3>Pecuaria</h3>
 
         <label>Tipo de Ganado:</label>
-        <select id="tipo_ganado">
-            <option value="Bovino">Bovino</option>
-            <option value="Ovino">Ovino</option>
-            <option value="Porcino">Porcino</option>
-            <option value="Ninguna">Ninguna</option>
-            <option value="Otro">Otro</option>
-        </select>
+        <div class="checkbox-group">
+            <input type="checkbox" id="bovino"> <label for="bovino">Bovino</label>
+            <input type="checkbox" id="ovino"> <label for="ovino">Ovino</label>
+            <input type="checkbox" id="porcino"> <label for="porcino">Porcino</label>
+            <input type="checkbox" id="ninguna"> <label for="ninguna">Ninguna</label>
+            <input type="text" id="otro_ganado" placeholder="Otro (especificar)">
+        </div>
 
         <label>Número de Cabezas/Ganado:</label>
         <input type="number" id="num_cabezas">
@@ -145,16 +116,8 @@
         <label>Residuos generados por mantenimiento y uso de maquinaria agrícola:</label>
         <textarea id="residuos_maquinaria"></textarea>
 
-        <h3>Efluentes</h3>
-
-        <label>¿El proyecto de riego podría generar vertidos de efluentes a cuerpos de agua?</label>
-        <select id="efluentes">
-            <option value="Si">Sí</option>
-            <option value="No">No</option>
-        </select>
-
-        <!-- COMPROMISO -->
-        <div class="compromiso">
+         <!-- COMPROMISO -->
+         <div class="compromiso">
             <h3>COMPROMISO DE CUMPLIMIENTO DE LA NORMATIVA VIGENTE</h3>
             <p>1. Dar estricto cumplimiento a la totalidad de la normativa ambiental vigente (Nacional, Provincial, Municipal).</p>
             <p>2. Asumir el compromiso de adoptar las medidas que correspondan en caso de verificarse alteraciones al ambiente.</p>
@@ -164,11 +127,14 @@
             <p>El que suscribe, en el carácter antes invocado, declara bajo juramento que los datos consignados en la presente son correctos y completos y que esta declaración ha sido confeccionada sin omitir ni falsear dato alguno que deba contener, siendo fiel expresión de la verdad.</p>
         </div>
 
-        <!-- Firma -->
-        <h3>FIRMA</h3>
-        <p>______________________________</p>
-        <h3>ACLARACIÓN:</h3>
-        <p>______________________________</p>
+     <!-- Firma -->
+     <h3>FIRMA</h3>
+     <p>______________________________</p>
+     <h3>ACLARACIÓN:</h3>
+     <p>______________________________</p>
+ 
+        </div>
+
         <button onclick="imprimirPDF()">Generar PDF</button>
     </div>
 
