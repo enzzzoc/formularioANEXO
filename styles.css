@@ -1,7 +1,36 @@
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Ajuste del logo */
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.logo img {
+    max-width: 250px; /* Ajuste del tamaño del logo */
+    height: auto;
+}
+
+h2, h3 {
+    color: #333;
+    text-align: center;
 }
 
 label {
@@ -12,55 +41,10 @@ label {
 
 input, select, textarea {
     width: 100%;
-    padding: 5px;
-    margin: 5px 0;
+    padding: 8px;
+    margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.container {
-    max-width: 700px;
-    margin: auto;
-}
-
-button {
-    padding: 10px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-
-.firma {
-    margin-top: 30px;
-}
-
-.firma p {
-    margin-top: 20px;
-}
-
-.logo {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.logo img {
-    max-width: 150px;
-}
-
-/* Estilos para impresión */
-@media print {
-    button {
-        display: none;
-    }
-
-    .logo {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    .logo img {
-        display: block;
-        margin: 0 auto;
-    }
+    border-radius: 4px;
 }
 
 /* Checkbox en línea */
@@ -73,4 +57,72 @@ button {
 .checkbox-group input {
     width: auto;
     margin-right: 5px;
+}
+
+.compromiso {
+    background: #eee;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+button {
+    width: 80%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Estilos para el footer */
+footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+/* Estilos para impresión en formato A4 */
+@media print {
+    body {
+        background: white;
+    }
+
+    .container {
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+    }
+
+    .logo img {
+        max-width: 100px; /* Tamaño más pequeño para la impresión */
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: none;
+        color: black;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    button {
+        display: none;
+    }
 }
