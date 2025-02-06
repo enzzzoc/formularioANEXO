@@ -1,7 +1,7 @@
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ccffcc; /* Verde claro */
     margin: 0;
     padding: 0;
 }
@@ -24,7 +24,7 @@ body {
 }
 
 .logo img {
-    max-width: 250px; /* Ajuste del tamaño del logo */
+    max-width: 250px;
     height: auto;
 }
 
@@ -40,11 +40,17 @@ label {
 }
 
 input, select, textarea {
-    width: 100%;
+    width: 80%;
     padding: 8px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+/* Cambiar color al escribir en los casilleros */
+input:focus, textarea:focus, select:focus {
+    background-color: #ffff99; /* Amarillo suave */
+    outline: none;
 }
 
 /* Checkbox en línea */
@@ -87,7 +93,7 @@ button:hover {
 footer {
     position: sticky;
     bottom: 0;
-    width: 100%;
+    width: 80%;
     background: #222;
     color: white;
     text-align: center;
@@ -109,13 +115,13 @@ footer {
     }
 
     .logo img {
-        max-width: 100px; /* Tamaño más pequeño para la impresión */
+        max-width: 100px;
     }
 
     footer {
         position: fixed;
         bottom: 0;
-        width: 100%;
+        width: 80%;
         background: none;
         color: black;
         text-align: center;
